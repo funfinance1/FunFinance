@@ -196,19 +196,37 @@ async function saveQuestionAttempt(questionId, correct) {
 // ══════════════════════════════════════════════════
 const CHAR_SVG = {
   victor:`<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="vFG" cx="42%" cy="35%" r="62%">
+        <stop offset="0%" stop-color="#fde8d0"/>
+        <stop offset="75%" stop-color="#f5d5b5"/>
+        <stop offset="100%" stop-color="#ddb898"/>
+      </radialGradient>
+    </defs>
     <circle cx="22" cy="22" r="22" fill="#0d1525"/>
-    <ellipse cx="22" cy="25" rx="13" ry="14" fill="#f5d5b5"/>
-    <rect x="9" y="8" width="26" height="10" rx="2" fill="#111"/>
-    <ellipse cx="22" cy="12" rx="13" ry="8" fill="#1a1a1a"/>
-    <rect x="9" y="14" width="26" height="5" fill="#1a1a1a"/>
-    <path d="M12 10 Q22 8 32 10" stroke="#333" stroke-width="1" fill="none" opacity=".6"/>
-    <ellipse cx="15.5" cy="21" rx="2.5" ry="3" fill="#111"/>
-    <ellipse cx="28.5" cy="21" rx="2.5" ry="3" fill="#111"/>
-    <circle cx="16.5" cy="20" r=".9" fill="white" fill-opacity=".8"/>
-    <circle cx="29.5" cy="20" r=".9" fill="white" fill-opacity=".8"/>
-    <path d="M13.5 18 Q15.5 16.5 17.5 18" stroke="#111" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M26.5 18 Q28.5 16.5 30.5 18" stroke="#111" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M15.5 29.5 Q22 27.5 28.5 29.5" stroke="#b07860" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="22" cy="25" rx="13" ry="14" fill="url(#vFG)"/>
+    <path d="M9 20 Q9 8 22 8 Q35 8 35 20 Q32 13 22 12 Q12 13 9 20 Z" fill="#1c1c1c"/>
+    <path d="M13 12 Q22 10 31 12" stroke="#2e2e2e" stroke-width="1.2" fill="none"/>
+    <path d="M9 20 Q12 16 22 15.5 Q32 16 35 20" stroke="#1c1c1c" stroke-width="2" fill="none"/>
+    <ellipse cx="9.5" cy="23" rx="1.8" ry="2.5" fill="#e8c4a0"/>
+    <ellipse cx="34.5" cy="23" rx="1.8" ry="2.5" fill="#e8c4a0"/>
+    <path d="M13.2 21.5 Q16 19.8 18.8 21.5 Q16 23.2 13.2 21.5 Z" fill="white"/>
+    <path d="M25.2 21.5 Q28 19.8 30.8 21.5 Q28 23.2 25.2 21.5 Z" fill="white"/>
+    <circle cx="16" cy="21.5" r="1.7" fill="#4a5060"/>
+    <circle cx="28" cy="21.5" r="1.7" fill="#4a5060"/>
+    <circle cx="16" cy="21.5" r=".95" fill="#111"/>
+    <circle cx="28" cy="21.5" r=".95" fill="#111"/>
+    <circle cx="16.6" cy="20.9" r=".5" fill="white" fill-opacity=".95"/>
+    <circle cx="28.6" cy="20.9" r=".5" fill="white" fill-opacity=".95"/>
+    <path d="M13.2 21.5 Q16 19.8 18.8 21.5" stroke="#222" stroke-width=".8" fill="none"/>
+    <path d="M25.2 21.5 Q28 19.8 30.8 21.5" stroke="#222" stroke-width=".8" fill="none"/>
+    <path d="M13 19 Q16 17.5 19 18.8" stroke="#1a1a1a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M25 18.8 Q28 17.5 31 19" stroke="#1a1a1a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M21 25 Q20.5 28 19.5 28.5 Q21 29.5 22 29 Q23 29.5 24.5 28.5 Q23.5 28 23 25" stroke="#c8a080" stroke-width=".8" fill="none" stroke-linecap="round" opacity=".7"/>
+    <ellipse cx="19.8" cy="28.8" rx=".9" ry=".6" fill="#c0a080" fill-opacity=".4"/>
+    <ellipse cx="24.2" cy="28.8" rx=".9" ry=".6" fill="#c0a080" fill-opacity=".4"/>
+    <path d="M17.5 32 Q22 30.5 26.5 32" stroke="#b07858" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M18.5 32 Q22 33.5 25.5 32" stroke="#c08868" stroke-width=".9" fill="none" stroke-linecap="round" opacity=".6"/>
     <path d="M9 44 L15 34 L22 37.5 L29 34 L35 44" fill="#1a2040"/>
     <path d="M19 34 L22 37.5 L25 34 L22 32 Z" fill="white"/>
     <path d="M20 34 L22 37.5 L24 34 L22 33.5 Z" fill="#2d3355"/>
